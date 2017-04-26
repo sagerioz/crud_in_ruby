@@ -6,9 +6,9 @@ class Comments < ActionMailer::Base
   #
   #   en.comments.submitted.subject
   #
-  def submitted
-    @greeting = "Hi"
+  def submitted(comment)
+    @comment = comment
 
-    mail to: "to@example.org"
+    mail to: "to@example.org", subject: "New Comment"
   end
 end
